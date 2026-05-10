@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.antonio.movieapp.ui.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_list"
+            app:destination="@id/movieListFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.antonio.movieapp.ui.MovieListFragment"
+        android:label="Películas">
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/movieDetailFragment"/>
+        <action
+            android:id="@+id/action_list_to_favorites"
+            app:destination="@id/favoritesFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.antonio.movieapp.ui.MovieDetailFragment"
+        android:label="Detalle">
+        <argument
+            android:name="movieId"
+            app:argType="integer"/>
+        <argument
+            android:name="title"
+            app:argType="string"/>
+        <argument
+            android:name="overview"
+            app:argType="string"/>
+        <argument
+            android:name="posterPath"
+            app:argType="string"/>
+        <argument
+            android:name="rating"
+            app:argType="float"/>
+        <argument
+            android:name="releaseDate"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.antonio.movieapp.ui.FavoritesFragment"
+        android:label="Favoritos"/>
+
+</navigation>
