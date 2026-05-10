@@ -52,6 +52,10 @@
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.antonio.movieapp.ui.FavoritesFragment"
-        android:label="Favoritos"/>
+        android:label="Favoritos">
+        <action
+            android:id="@+id/action_favorites_to_detail"
+            app:destination="@id/movieDetailFragment"/>
+    </fragment>
 
 </navigation>

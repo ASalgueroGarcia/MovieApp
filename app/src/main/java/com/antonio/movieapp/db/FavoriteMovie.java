@@ -11,4 +11,5 @@ public class FavoriteMovie {
     public String posterPath;
     public double voteAverage;
     public String releaseDate;
+    public String overview;
 }
